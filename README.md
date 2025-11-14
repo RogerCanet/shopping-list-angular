@@ -56,6 +56,7 @@ The app will open in your browser at http://localhost:4200.
 
 ## 🔹 Build & Deployment to GitHub Pages
 
+While inside of the shopping-list-angular\shopping-list folder:
 
 1. Build the app for production:
 
