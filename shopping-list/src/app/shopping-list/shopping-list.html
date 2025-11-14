@@ -5,9 +5,9 @@
   <button type="submit">Add</button>
 </form>
 
-<ul>
-  <li *ngFor="let item of items">
-    {{ item.name }}
-    <button (click)="removeItem(item)">Remove</button>
-  </li>
-</ul>
+<div class="shopping-list-container">
+  <div class="shopping-item" *ngFor="let item of items">
+    <span>{{ item.name }}</span>
+    <button (click)="removeItem(item)">Delete</button>
+  </div>
+</div>

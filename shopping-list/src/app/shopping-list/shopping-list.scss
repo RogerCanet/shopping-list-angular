@@ -1,0 +1,33 @@
+.shopping-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.shopping-item {
+  display: flex;
+  justify-content: space-between; // texto a la izquierda, botón a la derecha
+  align-items: center;
+  background-color: #f0f0f0; // color de fondo del rectángulo
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); // sombra ligera
+  transition: background-color 0.2s;
+
+  button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #ff7875;
+    }
+  }
+}
