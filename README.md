@@ -56,6 +56,15 @@ The app will open in your browser at http://localhost:4200.
 
 ## 🔹 Build & Deployment to GitHub Pages
 
+### 🔹 Automatic Build
+
+Pipeline will automatically deploy any code pushed to main branch. 
+
+### 🔹 Manual Build
+
+> [!CAUTION]
+> ⚠️ Do not use unless necessary.
+
 While inside of the shopping-list-angular\shopping-list folder:
 
 1. Build the app for production:
