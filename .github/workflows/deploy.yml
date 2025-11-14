@@ -38,7 +38,9 @@ jobs:
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/shopping-list/browser --verbose
+        run: |
+          npx angular-cli-ghpages --dir=dist/shopping-list/browser \
+          --repo=https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/RogerCanet/shopping-list-angular.git
         working-directory: shopping-list
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
