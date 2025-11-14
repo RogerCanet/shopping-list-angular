@@ -27,7 +27,7 @@ jobs:
 
       # Build Angular
       - name: Build Angular App
-        run: ng build --configuration production --base-href "/shopping-list-angular/"
+        run: npx ng build --configuration production --base-href "/shopping-list-angular/"
         working-directory: shopping-list
 
       # Deploy to GitHub Pages
