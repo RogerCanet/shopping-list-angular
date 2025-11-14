@@ -1,0 +1,36 @@
+name: Deploy Angular to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Clone repo
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Install node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '24'
+
+      # install dependencies
+      - name: Install Dependencies
+        run: npm install
+        working-directory: shopping-list
+
+      # Build Angular
+      - name: Build Angular App
+        run: ng build --configuration production --base-href "/shopping-list-angular/"
+        working-directory: shopping-list
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        run: npx angular-cli-ghpages --dir=dist/shopping-list/browser
+        working-directory: shopping-list
