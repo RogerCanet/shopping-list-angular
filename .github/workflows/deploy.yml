@@ -32,7 +32,7 @@ jobs:
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/shopping-list/browser --quiet
+        run: npx angular-cli-ghpages --dir=dist/shopping-list/browser
         working-directory: shopping-list
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
