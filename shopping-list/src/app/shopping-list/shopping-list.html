@@ -1,0 +1,13 @@
+<h1>My Shopping List!</h1>
+
+<form (submit)="addItem(); $event.preventDefault()">
+  <input type="text" placeholder="New item" [(ngModel)]="newItemName" name="itemName" required>
+  <button type="submit">Add</button>
+</form>
+
+<ul>
+  <li *ngFor="let item of items">
+    {{ item.name }}
+    <button (click)="removeItem(item)">Remove</button>
+  </li>
+</ul>
