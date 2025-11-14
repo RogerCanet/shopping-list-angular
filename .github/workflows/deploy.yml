@@ -30,6 +30,12 @@ jobs:
         run: npx ng build --configuration production --base-href "/shopping-list-angular/"
         working-directory: shopping-list
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+
+
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: npx angular-cli-ghpages --dir=dist/shopping-list/browser
